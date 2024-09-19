@@ -28,8 +28,8 @@ Some of the most common things I do with VIM:
 * Better hand position to navigate with **HJKL** instead of using arrows.
 * Fast navigation with **w** to move to next word and **b** to move to previous word, so I can navigate a line faster.
 * Use of tabs so I can easily navigate between files that I use frequently or I need to use for my daily work. This is my configuration for working with tabs:
-    - *:map <F7> :tabp <CR>*
-    - *:map <F8> :tabn <CR>*
+    - *:map \<F7\> :tabp \<CR\>*
+    - *:map \<F8\> :tabn \<CR\>*
 * Always seeing the file name at bottom so if I have lots of tabs I can see the proper file name in the bottom since the tab title will be to short to even know which file I am working with. I use this command for that *:set laststatus=2*
 * Using sessions.
     - Create session from current vim workplace *:mksession! my_vim_session.vim*
