@@ -1,0 +1,4 @@
+# My personal blog.
+
+This is something I wanted to do since a long time ago, I tried different ways and nothing conviced me at all. But now, thanks to vim, github, github actions and SSGs, I can finally start writing my own blog periodically since I spent most of my time in a command line. So it was a matter of finding the most comfortable medium for me to start blogging I guess. I never really liked to spent too much time in Blog's UIs, formatting text, placing images, etc.. etc.. it was never my thing, I am more of a "I think something, I publish something" kind of guy. So opening a browser, searching a website, login in, etc... all of that were like little things that made it impossible for me to find my way to start blogging in a consistent way. So, I believe this time I found my most comfortable way to blog so it is time for me to start sharing my random thoughts to this world because, for the sake of my wall and my friends.
+
