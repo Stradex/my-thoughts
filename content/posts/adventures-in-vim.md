@@ -6,7 +6,7 @@ params:
 title: Thoughts about six months using Vim.
 ---
 
-# Why I started using vim?
+## Why I started using vim?
 
 I do programming since a long time. Most of my time programming was related to Game Development *(Networking)*, Web App Development, and Desktop development. Most of the time I did software in my local machine or I didn't have to use remote servers too much since six months ago. I used to work with VSCode which I used to find it great and I was really comfortable with, I also used Atom before that and Sublime Text Editor even before, but after I started to work with multiple remote servers everything changed for me.
 
