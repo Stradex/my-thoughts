@@ -1,3 +1,11 @@
+---
+date: 2024-09-19
+draft: false
+params:
+  author: Stradex
+title: Welcome to my blog
+---
+
 # Welcome to my blog
 
 Hi everyone, this is Stradex. It's been a long while since I wanted to start making my own blog but every single time I wanted to start with this, I failed to do it because I was never able to find the proper medium to share my thoughts quickly and in a comfortable way to me. 
