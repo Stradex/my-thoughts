@@ -6,6 +6,7 @@ params:
 title: LAMP & Laravel stack optimization.
 ---
 
+*(Post in progress)*
 
 ## LAMP & Laravel Stack optimization.
 
