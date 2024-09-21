@@ -1,6 +1,6 @@
 baseURL = 'https://stradex.github.io/my-thoughts/'
 languageCode = 'en-us'
-title = 'Stradex personal notebook'
+title = 'Stradex'
 theme = 'hugo-theme-console-dark'
 [services]
   [services.disqus]
