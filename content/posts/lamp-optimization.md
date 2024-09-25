@@ -112,3 +112,31 @@ KeepAlive On
 MaxKeepAliveRequests 500
 
 ```
+
+
+## PHP-FPM Optimization for high traffic.
+
+I personally always use PHP-FPM, but some of the things I will share here will also work for regular PHP or other variants.
+
+### Choosing the right process managment type.
+
+To select a process managment (pm) we must modify our /etc/php/8.2/fpm/php-fpm.conf
+I actually recommend to create a totally new conf folder, for example, mkdir /etc/php8.2/fpm/myconfigs.d/ and there just create a new .conf file, for example /etc/php8.2/fpm/myconfigs.d/performance.conf
+Then, to load all *.conf* files inside that folder, you add this at the bottom for your php-fpm.conf file:
+
+```
+include=/etc/php/8.2/fpm/myconfigs.d/*.conf
+```
+
+Now we are ready to select our process managment for php-fpm. We have three types of PMs: **ondemand**, **static** and **dynamic**.
+Let's explain a bit the differences between them and which one we should choose depending in our server resources and traffic.
+
+- **static**: This is, *in theory*, the best one for high traffic servers when you have resources to spare. It will keep always spawned a certain number of child processes for PHP that will make it faster to handle when you process a request since the process will be already there opened to handle the request fast. The downside about this is that it will always consume a huge amount of RAM, depending on your settings *(we will see that later)*, since it will always keep a fixed number of processes open to handle incoming request faster. Also, even if this is in theory the ideal process managment type for high traffic servers with enough resources, a bad configuration could lead to even slower responses because the concurrent requests are higher than the fixed opened processes or lot of usage of RAM that could potentially crash the server or some processes because the number of opened fixed process are higher than what our system memory can handle.
+
+- **ondemand**: This would be kind of the opposite of static. If there are no incoming request in a while, there would be no child processes running. Then if requests start incoming it will be starting processes according to the demand *(hehe)* and if after a while there are no more incoming requests, then the child processes could go down to zero again. This, in theory, is ideal for servers with less resources, non-production servers, etc... Usually you can also choose this more safely when you are in rush and you don't know how to pproperly set up your settings to tune for **static** pm.
+
+- **dynamic**: If **static** and **ondemand** had a child, this pm would be the child. This is like ondemand but it allows you to configure some settings to ensure a minimum amount of child processes always running, in that aspect it is like a mix of ondemand and static.
+
+<!-- DOCS:
+PHP-FPM Optimization: https://geoligard.com/a-deeper-dive-into-optimal-php-fpm-settings
+ -->
